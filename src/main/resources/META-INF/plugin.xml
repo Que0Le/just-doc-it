@@ -61,8 +61,11 @@
   </actions>
 
   <extensions defaultExtensionNs="com.intellij">
+    <postStartupActivity implementation="org.jdi.plugin.startup.MyStartupActivity"/>
     <typedHandler implementation="org.jdi.plugin.editor.MyTypedHandler"/>
-
+    <notificationGroup id="JustDocIt"
+                       displayType="BALLOON"
+                       isLogByDefault="true"/>
     <toolWindow
             id="My Tool Window"
             anchor="bottom"
