@@ -1,4 +1,4 @@
-package toolwindows;
+package org.jdi.plugin.toolwindow;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
