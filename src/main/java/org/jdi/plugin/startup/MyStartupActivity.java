@@ -16,6 +16,7 @@ import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
+import org.jdi.plugin.common.PluginParams;
 import org.jdi.plugin.services.MyProjectService;
 import org.jdi.plugin.settings.MySettings;
 import org.jetbrains.annotations.NotNull;
@@ -55,7 +56,7 @@ public class MyStartupActivity implements ProjectActivity {
         // 4. Show a notification
         NotificationGroupManager.getInstance()
                 .getNotificationGroup("JustDocIt")
-                .createNotification("Plugin ready!", NotificationType.INFORMATION)
+                .createNotification(String.format("Plugin '%s' ready!", PluginParams.App.NAME), NotificationType.INFORMATION)
                 .notify(project);
 
         // 5. Register file listeners
