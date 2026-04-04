@@ -18,6 +18,7 @@ public final class MySettings implements PersistentStateComponent<MySettings.Sta
         public String apiKey = "";
         public String baseUrl = "https://api.example.com";
         public int maxResults = 10;
+        public String outputDirectory = "";
     }
 
     private State state = new State();
@@ -50,4 +51,7 @@ public final class MySettings implements PersistentStateComponent<MySettings.Sta
 
     public int getMaxResults() { return state.maxResults; }
     public void setMaxResults(int max) { state.maxResults = max; }
+
+    public String getOutputDirectory() { return state.outputDirectory; }
+    public void setOutputDirectory(String path) { state.outputDirectory = path; }
 }

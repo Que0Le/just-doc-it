@@ -1,5 +1,12 @@
 
+### Logging
 
+Define log method in param. Use in each class:
+
+```java
+private static final PluginLogger LOG = LoggerFactory.getLogger(NoteSettingsConfigurable.class);
+```
+### etc
 
 How to use settings class:
 

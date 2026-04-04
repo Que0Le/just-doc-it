@@ -61,6 +61,19 @@
   </actions>
 
   <extensions defaultExtensionNs="com.intellij">
+    <applicationService
+            serviceImplementation="org.jdi.plugin.settings.NoteSettings"/>
+    <applicationConfigurable
+            parentId="tools"
+            instance="org.jdi.plugin.settings.NoteSettingsConfigurable"
+            id="org.jdi.plugin.settings.NoteSettingsConfigurable"
+            displayName="Just Doc It: Notes"/>
+
+    <projectConfigurable
+            parentId="tools"
+            instance="org.jdi.plugin.settings.MySettingsConfigurable"
+            id="org.jdi.plugin.settings.MySettingsConfigurable"
+            displayName="Just Doc It"/>
     <postStartupActivity implementation="org.jdi.plugin.startup.MyStartupActivity"/>
     <typedHandler implementation="org.jdi.plugin.editor.MyTypedHandler"/>
     <notificationGroup id="JustDocIt"

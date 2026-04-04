@@ -13,6 +13,14 @@ public class PluginParams {
     }
 
     public static final class Logging {
+
+        public enum LoggerMode {
+            DEV,        // custom DevLogger: prints to Run console via sout, with location info
+            INTELLIJ    // IntelliJ Logger: writes to idea.log, clickable in host IDE
+        }
+
+        public static final LoggerMode LOGGER_MODE = LoggerMode.DEV;
+
         private Logging() {
 
         }
