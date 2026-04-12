@@ -44,8 +44,7 @@ public class NoteSettingsConfigurable implements Configurable {
     public void apply() {
         NoteSettings settings = NoteSettings.getInstance();
         settings.setNotesRootFolder(settingsComponent.getNotesRootFolder());
-        LOG.info("Hez: " + settingsComponent.getNotesRootFolder());
-        System.out.println("Hez: " + settingsComponent.getNotesRootFolder());
+        LOG.info("Set Note root folder: " + settingsComponent.getNotesRootFolder());
     }
 
     @Override
